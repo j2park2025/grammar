@@ -1,0 +1,19 @@
+html {
+	padding: 0;
+	margin: 0;
+  font-family: "Helvetica";
+}
+
+header {
+	background: #73d3e4;
+	padding: 1% 5%;
+	margin: 0;
+	width: 90%;
+}
+
+body {
+	background: #c4e4e4;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}

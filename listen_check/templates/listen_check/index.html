@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Transcribing Website </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+</figure>
+<h1 id="title"> Transcribing Website </h1>
+<style>
+    h1{text-align: center;}
+</style>
+
+</header>
+
+{% load static %}
+<img src="{% static 'listen_check/hearim.png' %}" 
+     alt="My image"
+     width="50"
+     height="50">
+
+    </section>
+
+    <h2>How to use this Site:</h2>
+
+    <section>
+        <ul>
+            <li>Prepare a sentence you would like to check.</li>
+            <li>Click the button.</li>
+            <li>Immediately say the sentence (within 10 seconds)</li>
+            <li>Wait around 10-30 seconds until the result shows up on the screen</li>
+            
+    </section>
+<section>
+<form action="{% url 'listen_check:index' %}" method="post">
+    {% csrf_token %}
+    <p>Please select your preferred recording time:</p>
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+</style>
+</section>
+
+
+  <pre id="log">
+  </pre>
+
+
+
+<section>
+
+<h3>Transcribed Result:</h3>
+   
+<u><p>{{ text }}</p></u>
+
+</section>
+<section>
+
+<h3>Accuracy:</h3>
+
+<u><p>{{ accuracy }}%</p></u>
+
+</section>
+</body>
+</html>
+
+<!-- <form action="" method="post">
+	{% csrf_token %}
+		{{ form.as_p }}
+	<input type="submit">
+</form> -->
