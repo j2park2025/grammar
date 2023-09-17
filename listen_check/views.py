@@ -20,7 +20,7 @@ import speech_recognition as sr
 import requests
 import json
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/JacquelineP/Coding/pigame/programmersprac/credentials.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/JacquelineP/Coding/stt_grammar/credentials.json"
 
 # 3 ㄱㅐ의 함수 를 만들어야함 
 # 1. 녹음 함수 
