@@ -156,18 +156,25 @@ class PostForm(forms.Form):
     # if '10 seconds'==True:
     #     seconds = 
 
+#from the urls code the code below is activated (bc of views.index)
 def index(request):
     
     form = PostForm()
     context = {'form': form}
-    if request.method == 'POST':
+    if request.method == 'POST': 
+        '''POST method and GET method
+        Post method: transfer data/information to the program
+        it is used to record the sentences submitted through the website
+        then we save the recording as a file to transcribe it and move to the next steps
+        the file is reset every time there is a new submission (= when the website reloads)
+        '''
         form = PostForm(request.POST) # Note: 인자 순서주의 POST, FILES
         # record
         if form.is_valid():
             print(form.cleaned_data['seconds'])
-            record(form.cleaned_data['seconds']) 
+            # record(form.cleaned_data['seconds']) 
             fiel = record(form.cleaned_data['seconds']) 
-            transcribe_file(fiel)
+            # transcribe_file(fiel)
             result, acc = transcribe_file("file.wav")
             spell_check(result)
             context = {"text": result, "accuracy": acc}
@@ -191,6 +198,10 @@ def index(request):
 
 
     elif request.method == "GET":
+        '''
+        The GET method uses urls to (blue) request a source
+        it stays undisturbed unlike the POST method which resets every time there is a new input
+        '''
         return render(request, 'listen_check/index.html', context)
 
         
@@ -198,9 +209,3 @@ def index(request):
     #     if something == "tensec":
     #         return seconds
     #     elif something == "thirtysec":
-        
-
-    
-    
-    
-	

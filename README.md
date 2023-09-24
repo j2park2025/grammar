@@ -32,6 +32,16 @@ _However, only until the first three steps has been achieved. Additional changes
     python manage.py runserver 
     ```
 
-Once done, you can access the website on localhost:8000
+Once done, you can access the website on localhost:8000/grammar/ 
 The image below is a sample output of the website:
 ![sttgrammarscreenshot](sttgrammarscreenshot.png)
+
+How to use the website:
+1. Go to the link localhost:8000/grammar/
+2. Read the instructions on how to use the site 
+3. Choose between 5~40 seconds length of audio recording
+4. Press the submit button underneath the time span given
+5. Immediately start speaking to the mic
+6. Wait about 10-30 seconds after the speaking time has eneded
+
+For technical deftails, please find [Document](listen_check/README.md)
